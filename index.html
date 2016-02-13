@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Taco Fancy</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300,900,400italic,700italic' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css"> 
+  <link rel="stylesheet" href="css/main.css">
+    
+  <!-- JS
+  -------------------------------------------------- -->
+  <script src="js/scripts.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+    
+
+</head>
+<body>
+
+  <!-- Search Container
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="billboard"> 
+  <div class="container logo"></div>
+  <div class="container query">
+    <div class="twelve columns">
+      <form>
+          <label for="ingredientsQuery">Tell us what you want and we'll give you a taco!</label>
+          <input style="width:75%;" type="search" placeholder="Chorizo, mushrooms, cojita..." id="keywordQuery">
+          <input type="submit" value="Search"> 
+        <p>Feeling saucy? Randomize</p>
+         </form>
+    </div>
+  </div>
+  <div class="container taco"></div>
+</div>
+  <!-- Results Container
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="red-container">
+  <div class="dropdown two columns offset-by-eight" id="menu">
+    <div input class="dropdown-toggle" type="text">
+      <div class="dropdown-text">Category</div>
+        <ul class="dropdown-content">
+          <li><input type="checkbox"> <a href="#">Full Tacos</a></li>
+          <li><input type="checkbox"> <a href="#">Base Layers</a></li>
+          <li><input type="checkbox"> <a href="#">Mixins</a></li>
+          <li><input type="checkbox"> <a href="#">Condiments</a></li>
+          <li><input type="checkbox"> <a href="#">Seasonings</a></li>
+          <li><input type="checkbox"> <a href="#">Shells</a></li>
+          <li><input type="checkbox"> <a href="#">"Like" Tacos</a></li>
+        </ul>
+      </div>
+    </div>
+  <div class="container content">
+    <p>
+      <h5>Recipes</h5>
+      <h6>{{cookbook.catagory}}</h6>
+        <ul>
+          <li>{{cookbook.name}}</li> 
+        </ul>
+    </p>
+  </div>
+</div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
