@@ -154,7 +154,11 @@
 }
 
 .nav {
-    display: none;
+    -webkit-transition: all 500ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -moz-transition: all 500ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    -o-transition: all 500ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
+    transition: all 500ms cubic-bezier(0.455, 0.030, 0.515, 0.955); /* easeInOutQuad */
+    height: 1px;
     position:fixed;
     float:left;
     width:100%;
@@ -162,6 +166,11 @@
     background-color: #9bc53d;
     margin-top:-13vmin;
     z-index: 9999;
+    top: 9vmin;
+}
+
+.nav.show {
+    height: 18vmin;
 }
 
 .nav ul {

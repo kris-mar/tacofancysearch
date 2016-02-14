@@ -1,4 +1,7 @@
 $(function() {
+    var showingNav = false;
+
+
   $('.dropdown-title').click(function () {
     $(".dropdown-content").toggle("slow");
   });
@@ -7,20 +10,26 @@ $(function() {
     });
     $(".taco").click(function() {
         $('html,body').animate({
-                scrollTop: $(".red-container").offset().top},
-            'slow');
+            scrollTop: $(".red-container").offset().top},
+            {
+                complete: scrollFunction(),
+                duration: 'slow'
+            });
+
     });
 
     function scrollFunction() {
         var sPos = document.body.scrollTop;
+        var nav = $(".nav");
+        var bbHeight = $(".billboard").height();
 
-        if(sPos > (window.innerHeight - ($(".nav").height()/2))) {
-            $(".nav").show("slow")
-            $(".nav").css('top', $(".nav").height()/2);
+        if(!showingNav && sPos >= (bbHeight)) {
+            showingNav = true;
+            nav.addClass("show");
         }
-        else {
-            $(".nav").hide("slow")
-            $(".nav").css('display', 'none');
+        else if(showingNav && !(sPos > (bbHeight))) {
+            showingNav = false;
+            nav.removeClass("show")
         }
     }
 
