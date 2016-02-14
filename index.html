@@ -38,7 +38,7 @@
   <div class="container query">
     <div class="twelve columns">
       <form>
-          <label for="ingredientsQuery">Tell us what you want and we'll give you a taco!</label>
+          <label for="keywordQuery">Tell us what you want and we'll give you a taco!</label>
           <input style="width:75%;" type="search" placeholder="Chorizo, mushrooms, cojita..." id="keywordQuery">
           <input type="submit" value="Search">
         <p>Feeling saucy? Randomize</p>
@@ -62,13 +62,13 @@
       <ul class="dropdown">
           <li class="dropdown-title">Categories &#9662;</li>
           <ul class="dropdown-content two columns" style="display:none;">
-            <li><input type="checkbox"> <a href="#">Full Tacos</a></li>
-            <li><input type="checkbox"> <a href="#">Base Layers</a></li>
-            <li><input type="checkbox"> <a href="#">Mixins</a></li>
-            <li><input type="checkbox"> <a href="#">Condiments</a></li>
-            <li><input type="checkbox"> <a href="#">Seasonings</a></li>
-            <li><input type="checkbox"> <a href="#">Shells</a></li>
-            <li><input type="checkbox"> <a href="#">"Like" Tacoss</a></li>
+            <li><span><input id="full_taco_cb" type="checkbox"/> <label for="full_taco_cb">Full Tacos</label></span></li>
+            <li><input id="base_layer_cb" type="checkbox"/> <label for="base_layer_cb" >Base Layers</label></li>
+            <li><input id="mixins_cb" type="checkbox"/> <label for="mixins_cb" >Mixins</label></li>
+            <li><input id="condiments_cb" type="checkbox"/> <label for="condiments_cb" >Condiments</label></li>
+            <li><input id="seasonings_cb" type="checkbox"/> <label for="seasonings_cb" >Seasonings</label></li>
+            <li><input id="shells_cb" type="checkbox"/> <label for="shells_cb" >Shells</label></li>
+            <li><input id="like_tacos_cb" type="checkbox"/> <label for="like_tacos_cb" >"Like" Tacos</label></li>
             <li class="feedme">Okay, feed me</li>
           </ul>
       </ul>
@@ -82,9 +82,6 @@
           </ul>
       </p>
     </div>
-      <div>
-          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      </div>
   </div>
 
 <!-- End Document

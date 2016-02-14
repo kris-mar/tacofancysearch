@@ -1,4 +1,9 @@
+html {
+    pointer-events: none;
+}
+
 .billboard {
+    pointer-events: all;
     text-align:center;
     background-color: #9BC53D;
     color: #FFF;
@@ -10,6 +15,7 @@
 }
 
 .red-container{
+    pointer-events: all;
     background-color: #C3423F;
     height:100%;
     color: #FFF;
@@ -73,8 +79,11 @@
     pointer-events: none;
 }
 
+.dropdown {
+    pointer-events: all;
+}
+
 .dropdown-title {
-  pointer-events: all;
   max-width: 100%;
   list-style: none;
   padding: 0 30px;
@@ -105,16 +114,22 @@
     background-color: #fdfdfd;
     border: 1px solid #ccc;
     width: 100%;
+    z-index: 100;
 }
 
-.dropdown-content a {
+.dropdown-content > input {
+    float: left;
+}
+
+.dropdown-content label {
+    float: right;
     text-decoration: none;
     color: #000;
     margin-left: 1vmin;
+    text-align: left;
 }
 
 .feedme{
-    pointer-events: all;
     width: 100%;
     list-style: none;
     color: #FFF;
@@ -154,6 +169,7 @@
 }
 
 .nav {
+    pointer-events: all;
     -webkit-transition: all 500ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
     -moz-transition: all 500ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
     -o-transition: all 500ms cubic-bezier(0.455, 0.030, 0.515, 0.955);
