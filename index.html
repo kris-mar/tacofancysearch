@@ -1,9 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>Taco Fancy</title>
   <meta name="description" content="">
@@ -20,67 +14,81 @@
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css"> 
+  <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/main.css">
-    
+
   <!-- JS
   -------------------------------------------------- -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <script src="js/scripts.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
-    
+
 
 </head>
 <body>
 
   <!-- Search Container
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<div class="billboard"> 
+<div class="billboard">
   <div class="container logo"></div>
   <div class="container query">
     <div class="twelve columns">
       <form>
           <label for="ingredientsQuery">Tell us what you want and we'll give you a taco!</label>
           <input style="width:75%;" type="search" placeholder="Chorizo, mushrooms, cojita..." id="keywordQuery">
-          <input type="submit" value="Search"> 
+          <input type="submit" value="Search">
         <p>Feeling saucy? Randomize</p>
          </form>
     </div>
   </div>
-  <div class="container taco"></div>
+  <div class="three columns offset-by-eight container taco"></div>
 </div>
+  <!-- Nav bar ------------------------------- -->
+  <div class="nav">
+      <ul>
+          <li class="two columns offset-by-one"><img src="imgs/title.png" style="height:10vmin;float:left;"></li>
+          <li class="three columns offset-by-five"><img src="imgs/tacoup.png" style="height:10vmin;float:right;"></li>
+      </ul>
+  </div>
   <!-- Results Container
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<div class="red-container">
-  <div class="dropdown two columns offset-by-eight" id="menu">
-    <div input class="dropdown-toggle" type="text">
-      <div class="dropdown-text">Category</div>
-        <ul class="dropdown-content">
-          <li><input type="checkbox"> <a href="#">Full Tacos</a></li>
-          <li><input type="checkbox"> <a href="#">Base Layers</a></li>
-          <li><input type="checkbox"> <a href="#">Mixins</a></li>
-          <li><input type="checkbox"> <a href="#">Condiments</a></li>
-          <li><input type="checkbox"> <a href="#">Seasonings</a></li>
-          <li><input type="checkbox"> <a href="#">Shells</a></li>
-          <li><input type="checkbox"> <a href="#">"Like" Tacos</a></li>
-        </ul>
-      </div>
+  <div class="red-container">
+
+    <div class="two columns offset-by-eight spacing">
+      <ul class="dropdown">
+          <li class="dropdown-title">Categories &#9662;</li>
+          <ul class="dropdown-content two columns" style="display:none;">
+            <li><input type="checkbox"> <a href="#">Full Tacos</a></li>
+            <li><input type="checkbox"> <a href="#">Base Layers</a></li>
+            <li><input type="checkbox"> <a href="#">Mixins</a></li>
+            <li><input type="checkbox"> <a href="#">Condiments</a></li>
+            <li><input type="checkbox"> <a href="#">Seasonings</a></li>
+            <li><input type="checkbox"> <a href="#">Shells</a></li>
+            <li><input type="checkbox"> <a href="#">"Like" Tacoss</a></li>
+            <li class="feedme">Okay, feed me</li>
+          </ul>
+      </ul>
     </div>
-  <div class="container content">
-    <p>
-      <h5>Recipes</h5>
-      <h6>{{cookbook.catagory}}</h6>
-        <ul>
-          <li>{{cookbook.name}}</li> 
-        </ul>
-    </p>
+    <div class="container" style="position:inline;">
+      <p>
+        <h5>Recipes</h5>
+        <h6>{{cookbook.catagory}}</h6>
+          <ul>
+            <li>{{cookbook.name}}</li>
+          </ul>
+      </p>
+    </div>
+      <div>
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      </div>
   </div>
-</div>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
+
